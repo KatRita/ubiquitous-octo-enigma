@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <title>Hot wheels | Hot wheels shop</title>
+    <style>
+
+        @media only screen and (min-width: 786px) {
+            article {
+                width: 350px;
+            }
+        }
+
+        .hotwheels {
+            margin-bottom: 20;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            padding: 10px;
+            border: solid 1px rgb(0, 0, 0);
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input[type="reset"] {
+            background: transparent;
+            border: 0;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            border: solid 1px rgb(0, 0, 0);
+            border-radius: 3px;
+            padding: 10px;
+        }
+    </style>
+
+    
+</head>
+<body>
+   <header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="hotwheels.html">Hot wheels</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+   </header>
+   <main>
+    <aside> <img src="images/logo.png" style="width: 15em; height: 15em;" alt="hotwheelslogo"></aside>
+    <article>
+  <!-- ADD CONTENT HERE -->
+    <h1>Order</h1>
+
+   <div class="hotwheels">
+    <img src="" />
+    <div class="columns">
+        <div class="title"></div>
+        <div class="price"></div>
+    </div>
+   </div> 
+
+    <form action="http://localhost:7071/api/post" method="POST">
+        <input type="hidden" id="hotwheels-order" name="hotwheels-order">
+        <input type="hidden" id="location" name="location">
+
+
+        <div class="input-group">
+            <div><label for="first-name">First name</label></div>
+            <div><input type="text" name="first-name" id="first-name" /></div>
+        </div>
+
+        <div class="input-group">
+            <div><label for="last-name">Last name</label></div>
+            <div><input type="text" name="last-name" id="last-name" /></div>   
+        </div>
+
+        <div class="input-group">
+            <div><label for="address">Adress</label></div>
+            <div><input type="text" name="address" id="address" /></div>   
+        </div>
+
+        <div class="input-group">
+            <div><label for="voivodeship">Voivodeship</label></div>
+            <div>
+                <select name="voivodeship" id="voivodeship">
+                    <option value="" selected>[Select one]</option>
+                    <option value="dolnośląskie">Dolnośląskie</option>
+                    <option value="kujawsko-pomorskie">Kujawsko-pomorskie</option>
+                    <option value="lubelskie">Lubelskie</option>
+                    <option value="lubuskie">Lubuskie</option>
+                    <option value="łódzkie">Łódzkie</option>
+                    <option value="małopolskie">Małopolskie</option>
+                    <option value="mazowieckie">Mazowieckie</option>
+                    <option value="opolskie">Opolskie</option>
+                    <option value="podkarpackie">Podkarpackie</option>
+                    <option value="podlaskie">Podlaskie</option>
+                    <option value="pomorskie">Pomorskie</option>
+                    <option value="śląskie">Śląskie</option>
+                    <option value="świętokrzyskie">Świętokrzyskie</option>
+                    <option value="warmińsko-mazurskie">Warmińsko-mazurskie</option>
+                    <option value="wielkopolskie">Wielkopolskie</option>
+                    <option value="zachodniopomorskie">Zachodniopomorskie</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div><label for="postal-code">Postal code</label></div>
+            <div><input type="text" name="postal-code" id="postal-code" /></div>
+        </div>
+
+        <div class="input-group">
+            <div><label for="comments">Comments</label></div>
+            <div>
+                <textarea 
+                name="comments" 
+                id="comments" 
+                cols="30" 
+                rows="10"
+                ></textarea>
+            </div>
+        </div>
+
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Order" />
+    </form>
+    </article>
+   </main>
+   <footer>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="hotwheels.html">Alcohol</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+   </footer>
+</body>
+<script>
+
+    window.addEventListener("DOMContentLoaded", function(e) {
+            
+            const order = localStorage.getItem("order");
+
+        if (order) {
+         const hotwheelsOrder = JSON.parse(order);
+
+         const hotwheels = document.querySelector(".hotwheels");
+
+         const title = hotwheels.querySelector(".title");
+         const price = hotwheels.querySelector(".price");
+
+         title.innerText = hotwheelsOrder.title;
+         price.innerText = hotwheelsOrder.price;
+
+         const img = hotwheels.querySelector("img");
+         img.setAttribute("src", `images/${hotwheelsOrder.id}.png`);
+         img.setAttribute("alt", hotwheelsOrder.title);
+        }
+      });
+
+</script>
+</html>

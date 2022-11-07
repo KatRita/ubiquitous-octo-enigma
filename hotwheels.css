@@ -1,0 +1,56 @@
+.hotwheels {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 15px;
+    border: #fff;
+    color: #fff;
+
+}
+
+.hotwheels img {
+    max-width: 180px;
+    height: 180px;
+    margin: auto;
+    display: block;
+}
+
+.hotwheels .title {
+    font-weight: bold;
+}
+
+.hotwheels .columns {
+    height: 60px ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotwheels .price {
+    text-align: right;
+    font-weight: bold;
+}
+
+.hotwheels button {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border: solid 3px rgb(78, 76, 78);
+    border-radius: 8px;
+}
+
+.hotwheels-pannel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columna .manufacturer .origin {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotwheels .title-price {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}

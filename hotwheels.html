@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <link rel="stylesheet" href="hotwheels.css" type="text/css" />
+    <title>Hot wheels | Hot wheels shop</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="hotwheels.html">Hot wheels</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside> <img src="images/logo.png" style="width: 15em; height: 15em;" alt="hotwheelslogo"></aside>
+        <article>
+            <h1> Hot wheels </h1>
+            <section class="columns-desktop">
+                <div class="hotwheels-pannel">
+                    <div class="hotwheels">
+                        <img src="images/mazdarx7-hotwheels.png" alt="mazdarx7" />
+                        <div class="columns">
+                            <div class="title-price">
+                                <div class="title">Mazda RX7</div>
+                                <div class="price">$5.99</div>
+                            </div>
+                            <div class="manufacturer">Mazda</div>
+                            <div class="origin">Japan: Hiroshima</div>
+                        </div>
+                        <button data-order="mazdarx7-hotwheels">Order</button>
+                    </div>
+                    <div class="hotwheels">
+                        <img src="images/ferrari599xx-hotwheels.png" alt="ferrari599xx" />
+                        <div class="columns">
+                            <div class="title-price">
+
+                            <div class="title">Ferrari 599XX</div>
+                            <div class="price">$6.99</div>
+                            </div>
+                            <div class="manufacturer">Ferrari</div>
+                            <div class="origin">Italy: Maranello</div>
+                        </div>
+                        <button data-order="ferrari599xx-hotwheels">Order</button>
+                    </div>
+                    <div class="hotwheels">
+                        <img src="images/chevroletcorvette z06-hotwheels.png" alt="Chevrolet Corvette Z06" />
+                        <div class="columns">
+                            <div class="title-price">
+                            <div class="title">Corvette Z06</div>
+                            <div class="price">$5.99</div>
+                            </div>
+                            <div class="manufacturer">Chevrolet</div>
+                            <div class="origin">United States: Bowling Green</div>
+                        </div>
+                        <button data-order="chevroletcorvette z06-hotwheels">Order</button>
+                    </div>
+
+                    <div class="hotwheels">
+                        <img src="images/aventador-hotwheels.png" alt="aventador" />
+                        <div class="columns">
+                            <div class="title-price">
+                            <div class="title">Aventador</div>
+                            <div class="price">$6.99</div>
+                        </div>
+                            <div class="manufacturer">Lamborghini</div>
+                            <div class="origin">Italy: Sant'Agata Bolognese</div>
+                        </div>
+                        <button data-order="aventador-hotwheels">Order</button>
+                    </div>
+
+                    <div class="hotwheels">
+                        <img src="images/astonmartindb11-hotwheels.png" alt="Aston Martin DB11" />
+                        <div class="columns">
+                            <div class="title-price">
+                            <div class="title">Aston Martin DB11</div>
+                            <div class="price">$5.99</div>
+                        </div>
+                            <div class="manufacturer">Aston Martin Lagonda</div>
+                            <div class="origin">United Kingdom: Gaydon</div>
+                        </div>
+                        <button data-order="astonmartindb11-hotwheels">Order</button>
+                    </div>
+
+                    <div class="hotwheels">
+                        <img src="images/SestoElemento-hotwheels.png" alt="Sesto Elemento" />
+                        <div class="columns">
+                            <div class="title-price">
+                            <div class="title">Sesto Elemento</div>
+                            <div class="price">$7.99</div>
+                         </div>
+                            <div class="manufacturer">Lamborghini</div>
+                            <div class="origin">Italy: Sant'Agata Bolognese</div>
+                        </div>
+                        <button data-order="SestoElemento-hotwheels">Order</button>
+                    </div>
+                    <div class="hotwheels">
+                        <img src="images/Chevrolet Corvette C5-hotwheels.png" alt="Chevrolet Corvette C5" />
+                        <div class="columns">
+                            <div class="title-price">
+                            <div class="title">Corvette C5</div>
+                            <div class="price">$5.99</div>
+                        </div>
+                            <div class="manufacturer">Chevrolet</div>
+                            <div class="origin">United States: Bowling Green</div>
+                        </div>
+                        <button data-order="Chevrolet Corvette C5-hotwheels">Order</button>
+                    </div>
+
+                    <div class="hotwheels">
+                        <img src="images/Pontiac GTO-hotwheels.png" alt="Pontiac GTO" />
+                        <div class="columns">
+                            <div class="title-price">
+                            <div class="title">Pontiac GTO</div>
+                            <div class="price">$5.99</div>
+                        </div>
+                            <div class="manufacturer">Pontiac</div>
+                            <div class="origin">United States: Detroit</div>
+                        </div>
+                        <button data-order="Pontiac GTO-hotwheels">Order</button>
+
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="hotwheels.html">Hot wheels</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function (e) {
+        const orderButtons = document.querySelectorAll("button[data-order]");
+
+        orderButtons.forEach(function (button) {
+
+            button.addEventListener("click", function (e) {
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const order = {
+                    id: (id = button.getAttribute("data-order")),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText,
+                };
+
+                localStorage.setItem("order", JSON.stringify(order));
+
+                const url = window.location.href.replace("hotwheels.html", "order.html");
+                window.location.href = url;
+            });
+        });
+    });
+</script>
+
+</html>
