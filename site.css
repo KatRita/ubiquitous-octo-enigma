@@ -106,26 +106,26 @@ aside {
     display: block;
 }
 
-.alcohol .title {
+.hotwheels .title {
     font-weight: bold;
     flex-direction: row;
 }
 
-.alcohol .columns {
+.hotwheels .columns {
     width: 100%;
 }
 
-.alcohol .price {
+.hotwheels .price {
     font-weight: bold;
     flex-direction: column;
 }
 
-.alcohol .columns div {
+.hotwheels .columns div {
     width: 50%;
 }
 
 
-.alcohol button {
+.hotwheels button {
     background-color: rgb(255, 255, 255);
     padding: 7px;
     margin: 8px;
@@ -133,7 +133,7 @@ aside {
     border-radius: 15px;
 }
 
-.alcohols-pannel {
+.hotwheels-pannel {
 display: flex;
 flex-wrap: wrap;
 } */
